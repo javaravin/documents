@@ -8,3 +8,27 @@ Steps
 
 1.Open PowerShell as an Administrator.
 2. Run the following command to generate a new self-signed certificate:
+  New-SelfSignedCertificate -DnsName "localhost" -CertStoreLocation "cert:\LocalMachine\My"
+  
+ This command generates a new self-signed certificate with the subject alternative name (SAN) "localhost" and stores it in the local machine certificate     store under the "Personal" folder. You can replace "localhost" with any other domain name or IP address that you want to use for the certificate. 
+ 
+3.Verify that the certificate was created by running the following command:
+  Get-ChildItem -Path cert:\LocalMachine\My
+  
+  This command displays a list of all certificates in the "Personal" store. Look for the certificate that you just created, and note its thumbprint (a long   string of letters and numbers).
+4. Export the certificate to a file by running the following command:
+    Export-Certificate -Cert "cert:\LocalMachine\My\<thumbprint>" -FilePath "<filename>.cer" -Type CERT
+    
+   Replace <thumbprint> with the thumbprint of the certificate that you noted in step 3, and replace <filename> with the name of the file that you want to    export the certificate to (e.g., "mycertificate").
+   
+5. Import the certificate into the trusted root store by running the following command:
+   
+   Import-Certificate -FilePath "<filename>.cer" -CertStoreLocation "cert:\LocalMachine\Root"
+   
+   This command imports the certificate from the file that you exported in step 4 into the trusted root store on the local machine. This allows any      application that trusts the root store to trust the certificate that you just created.
+
+   
+
+
+ 
+
