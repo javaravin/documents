@@ -94,5 +94,20 @@ Create  React app
      
          
      
+    Arrow function :
+    
+       const Greet= () => {
        
+       return <h1> hello</h1>
        
+    Named export :
+    
+      export const Greet=() => {
+       
+       return <h1> hello </h1>
+       
+       if use named export we should use same name of function in app.js in import
+       like import {Greet} from './component/greet.j'
+       
+           
+    Named export 
