@@ -1,0 +1,98 @@
+React pre-install
+need to install visual code install
+need to install node version 
+
+
+Create  React app
+   1. run command npx create-react-app <appname>
+    after run above step it will create react with above specified app name , next need to run below commands
+   2. cd app-name
+   3. npm start
+   
+  Understanding Folder structure:
+  <appname>
+    nodmoduel/
+    src/
+    public/
+    package.json
+    packate.lock.json
+    
+    ------------
+    packate.json
+       these are the 
+       "react": "^18.2.0",
+       "react-dom": "^18.2.0",
+    Run the application
+    
+      "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+    
+  it will identify the errors this tool will help it.  
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  
+  It is compatable to browser list
+  
+  
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+  
+  Lets talk about folders
+    1. public
+       contains 6 files
+       robots
+       as beginers need to concentrate the index.html
+       
+                 
+          it has only single html page in react application
+          might be we will do changs on header section not in body.
+          if you want react to controll UI that purpose we are going to maintain one div tag that is id is root
+          
+          
+     2. Starting point of react application is index.js
+     
+     What is component?
+        1. component is represents the user interface . for example it will seperate heder, sidenave,main, footer
+        
+      How does translate the component to code?
+         javascript File    App.js
+         
+         generally function type code it contains js file 
+         
+         two type of components i.e
+         
+            Function type component
+            class type component
+        
+        
+        Declare function component:
+        
+            1. Component 
+                  create file on compoent folder then after
+                    create function on component file
+                   with default export
+            2. import component in appl.js
+            3. user that function in function app()
+     
+         
+     
+       
+       
